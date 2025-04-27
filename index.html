@@ -5,139 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lo Que Calla Tu Sombra</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+
   <style>
-    /* BASIC RESET */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior: smooth; }
+    /* RESET & BASE */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     body {
       background: #111;
       color: #eee;
       font-family: 'Roboto', sans-serif;
-      line-height: 1.4;      /* tighten text */
+      line-height: 1.5;
     }
+    a { text-decoration: none; }
 
-    /* CONTAINERS */
-    header, section {
-      max-width: 800px;
+    /* CONTAINER CENTRAL */
+    .container {
+      max-width: 700px;
       margin: 0 auto;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
 
-    /* LOGO */
-    img.logo {
+    /* LOGO + HEADER */
+    .logo {
       display: block;
-      margin: 0 auto 1rem;
-      max-width: 150px;      /* smaller on desktop */
+      margin: 0 auto 1.5rem;
+      max-width: 120px;
       width: 100%;
       height: auto;
     }
-
-    /* TITLES */
-    h1, h2, h3 {
+    h1 {
       font-family: 'Playfair Display', serif;
+      font-size: 2.25rem;
       text-align: center;
-      margin-bottom: .75rem; /* tighter */
+      margin-bottom: .75rem;
+      line-height: 1.2;
     }
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.2rem; font-weight: normal; }
-    h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+    .subtitles h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: .5rem;
+      opacity: .85;
+      line-height: 1.3;
+    }
 
-    /* VIDEO */
+    /* VÍDEO */
     .video-wrap {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      margin: 1.5rem 0;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.5);
     }
     .video-wrap iframe {
       position: absolute; top:0; left:0;
       width:100%; height:100%; border:0;
     }
 
-    /* BUTTON */
+    /* BOTÃO */
     .btn {
       display:inline-block;
       background:#e63946;
       color:#fff;
-      padding: .75rem 1.5rem;
-      text-decoration:none;
-      font-weight:bold;
+      padding:.75rem 1.5rem;
+      font-weight:600;
       border-radius:4px;
       transition: background .2s;
-      margin: 1rem 0;
+      margin-bottom:2rem;
     }
     .btn:hover { background:#d62828; }
 
-    /* BENEFITS */
+    /* LISTA DE BENEFÍCIOS */
     ul {
-      list-style: disc inside;
-      margin: 1rem 0 1.5rem;
+      list-style: none;
+      margin: 1rem 0 2rem;
+      padding-left: 1rem;
     }
-    li { margin-bottom: .5rem; line-height:1.3; }
+    ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: .75rem;
+      line-height:1.4;
+    }
+    ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #e63946;
+    }
 
-    /* TESTIMONIALS */
+    /* DEPOIMENTOS */
     .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .testimonial {
       background: #222;
       padding: 1rem;
-      border-radius: 4px;
-      margin: 1.5rem 0;
-    }
-    .testimonials p {
-      margin-bottom: .75rem;
+      border-radius: 6px;
       font-style: italic;
+      font-size:.95rem;
       line-height:1.3;
     }
-
-    /* PRICE */
-    .price {
-      text-align: center;
-      font-size: 1.1rem;
-      margin: 1rem 0;
+    .testimonial strong {
+      display: block;
+      margin-top: .5rem;
+      font-style: normal;
+      text-align: right;
+      opacity:.8;
     }
 
-    /* FINAL MESSAGE */
+    /* DETALHES E PREÇO */
+    .details p {
+      margin-bottom: .5rem;
+      opacity: .9;
+      font-size:.95rem;
+    }
+    .price {
+      text-align:center;
+      font-size:1.15rem;
+      margin:1.5rem 0;
+    }
+    .price strong { font-size:1.3rem; }
+
+    /* MENSAGEM FINAL */
     .final {
-      text-align: center;
+      text-align:center;
       font-style: italic;
       margin-top: 2rem;
-      line-height: 1.4;
+      line-height:1.4;
+      opacity:.8;
     }
 
-    /* RESPONSIVE ADJUSTMENTS */
-    @media (max-width: 600px) {
-      header, section { padding: 1rem; }
-      h1 { font-size: 1.5rem; }
-      h2 { font-size: 1rem; }
-      .btn { padding: .5rem 1rem; font-size: .9rem; }
-      ul { margin: .75rem 0 1rem; }
-      h3 { margin-top: 1rem; }
+    /* RESPONSIVO */
+    @media(max-width:600px) {
+      .container { padding: 1rem; }
+      h1 { font-size:1.75rem; }
+      .subtitles h2 { font-size:1rem; }
+      .btn { padding:.6rem 1.2rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <div class="container">
+    <!-- logo -->
     <img src="logo.png" alt="Lo Que Calla Tu Sombra" class="logo">
-    <h1>LO QUE CALLA TU SOMBRA — CUANDO EL DOLOR SE VUELVE ESPEJO</h1>
-    <h2>Un libro que no busca explicar…<br>Busca revelar.</h2>
-    <h2>Enfrentar tu sombra no es romperte.<br>Es reunirte.</h2>
-    <h2>Basado en la psicología analítica de Carl Jung.<br>Escrito para mujeres que ya no soportan anestesiar su verdad.</h2>
-  </header>
 
-  <section>
+    <!-- título e subtítulos -->
+    <h1>LO QUE CALLA TU SOMBRA — CUANDO EL DOLOR SE VUELVE ESPEJO</h1>
+    <div class="subtitles">
+      <h2>Un libro que no busca explicar… Busca revelar.</h2>
+      <h2>Enfrentar tu sombra no es romperte. Es reunirte.</h2>
+      <h2>Basado en la psicología analítica de Carl Jung. Escrito para mujeres que ya no soportan anestesiar su verdad.</h2>
+    </div>
+
+    <!-- vídeo -->
     <div class="video-wrap">
-      <!-- replace YOUR_VIDEO_ID when ready -->
       <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
     </div>
 
+    <!-- botão -->
     <div style="text-align:center;">
       <a class="btn" href="https://pay.hotmart.com/E99213726P" target="_blank">
         COMPRAR AHORA — ACCESO INMEDIATO
       </a>
     </div>
 
-    <h3>Este libro te ayudará a…</h3>
+    <!-- benefícios -->
+    <h2 style="margin-top:2rem; text-align:center;">Este libro te ayudará a…</h2>
     <ul>
       <li>Reconocer e integrar tu Sombra a través de una narrativa evocativa.</li>
       <li>Entender por qué repites vínculos que desgarran tu alma.</li>
@@ -146,32 +186,43 @@
       <li>Romper los ciclos invisibles de abandono y volver a habitarte.</li>
     </ul>
 
+    <!-- depoimentos -->
     <div class="testimonials">
-      <h3>Confiado por mujeres que eligieron la profundidad sobre la anestesia.</h3>
-      <!-- you’ll add 4 real testimonial screenshots here -->
-      <p>“Me sentí vista por primera vez, ¡una experiencia profunda!” – Ana G.</p>
-      <p>“Este libro reflejó cada rincón de mi dolor y me dio herramientas para transformarlo.” – María P.</p>
+      <div class="testimonial">
+        “Me sentí vista por primera vez, ¡una experiencia profunda!”
+        <strong>– Ana G.</strong>
+      </div>
+      <div class="testimonial">
+        “Este libro reflejó cada rincón de mi dolor y me dio herramientas para transformarlo.”
+        <strong>– María P.</strong>
+      </div>
+      <!-- Aqui depois insira 2 divs com screenshots -->
     </div>
 
-    <h3>Sobre el contenido de “Lo Que Calla Tu Sombra”</h3>
-    <p>Formato: eBook PDF descargable<br>
-       Páginas: 53<br>
-       Acceso: inmediato vía email<br>
-       Base: psicología analítica de Carl Gustav Jung<br>
-       Estilo: escritura simbólica, emocional, transformadora
-    </p>
+    <!-- detalhes do produto -->
+    <div class="details">
+      <h2 style="margin-top:2rem;">Sobre el contenido de “Lo Que Calla Tu Sombra”</h2>
+      <p>Formato: eBook PDF descargable</p>
+      <p>Páginas: 53</p>
+      <p>Acceso: inmediato vía email</p>
+      <p>Base: psicología analítica de Carl Gustav Jung</p>
+      <p>Estilo: escritura simbólica, emocional, transformadora</p>
+    </div>
 
+    <!-- preço -->
     <div class="price">
       <strong>Precio especial de lanzamiento: 9,99 USD</strong><br>
       (Acceso inmediato, lectura privada en cualquier dispositivo.)
     </div>
 
+    <!-- botão final -->
     <div style="text-align:center;">
       <a class="btn" href="https://pay.hotmart.com/E99213726P" target="_blank">
         COMPRAR AHORA — ACCESO INMEDIATO
       </a>
     </div>
 
+    <!-- mensagem final -->
     <div class="final">
       No es un manual.<br>
       No es una respuesta.<br><br>
@@ -179,7 +230,7 @@
       Una vez que ves... ya no puedes desverte.<br>
       Retorno para ti.
     </div>
-  </section>
+  </div>
 
 </body>
 </html>
