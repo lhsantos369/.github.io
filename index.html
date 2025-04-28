@@ -13,7 +13,7 @@
       color: #eee;
       font-family: 'Roboto', sans-serif;
       line-height: 1.5;
-      text-align: justify;
+      text-align: center; /* tudo centralizado */
     }
     a { text-decoration: none; }
 
@@ -26,7 +26,6 @@
 
     /* LOGO */
     .logo {
-      display: block;
       margin: 0 auto 1.5rem;
       max-width: 140px;
       width: 100%;
@@ -36,7 +35,6 @@
     /* HEADERS */
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
-      text-align: center;
       line-height: 1.2;
     }
     h1 {
@@ -46,7 +44,7 @@
     .subtitles h2 {
       font-size: 1.1rem;
       font-weight: normal;
-      margin-bottom: 1.25rem; /* mais respiro */
+      margin-bottom: 1.25rem;
       opacity: .85;
     }
     h3 {
@@ -61,9 +59,10 @@
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      margin: 2rem 0;
+      margin: 2rem auto;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,.5);
+      max-width: 100%;
     }
     .video-wrap iframe {
       position: absolute; top:0; left:0;
@@ -80,15 +79,16 @@
       border-radius:4px;
       transition: background .2s;
       margin:1rem auto 2rem auto;
-      text-align:center;
     }
     .btn:hover { background:#ff4c4c; }
 
     /* BENEFÍCIOS */
     ul {
       list-style: none;
-      padding-left: 1.5rem;
-      margin: 1rem 0 2rem;
+      padding: 0;
+      margin: 1rem auto 2rem;
+      display: inline-block;
+      text-align: left;
     }
     ul li {
       position: relative;
@@ -112,16 +112,14 @@
     }
     .testimonial {
       background: #222;
-      padding: 1rem;
       border-radius: 6px;
-      text-align: center;
+      padding: 1rem;
     }
     .testimonial .test-img {
       width: 100%;
       border-radius: 6px;
       object-fit: cover;
       max-height: 180px;
-      margin-bottom: .5rem;
     }
 
     /* BLOCO FINAL UNIFICADO */
@@ -171,16 +169,18 @@
       margin-bottom: .75rem;
       opacity: .9;
     }
+    /* apenas ticks verdes */
     .final-block .trust li::before {
       content: '✔';
       position: absolute;
       left: 0;
-      color: #ff6b6b;
+      color: #38b000;
     }
-    .final-block .final {
+    .final-block .final p {
       font-style: italic;
       opacity: .8;
       line-height: 1.4;
+      margin: .5rem 0;
     }
 
     /* RESPONSIVO */
@@ -195,6 +195,7 @@
 <body>
 
   <div class="container">
+
     <!-- Logo -->
     <img src="logo.png" alt="Lo Que Calla Tu Sombra" class="logo">
 
@@ -212,11 +213,9 @@
     </div>
 
     <!-- Botão de compra -->
-    <div>
-      <a class="btn" href="https://pay.hotmart.com/E99213726P" target="_blank">
-        COMPRAR AHORA — ACCESO INMEDIATO
-      </a>
-    </div>
+    <a class="btn" href="https://pay.hotmart.com/E99213726P" target="_blank">
+      COMPRAR AHORA — ACCESO INMEDIATO
+    </a>
 
     <!-- Benefícios -->
     <h3>Este libro te ayudará a…</h3>
