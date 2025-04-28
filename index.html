@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lo Que Calla Tu Sombra</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-
   <style>
     /* RESET & BASE */
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -14,6 +13,7 @@
       color: #eee;
       font-family: 'Roboto', sans-serif;
       line-height: 1.5;
+      text-align: justify;
     }
     a { text-decoration: none; }
 
@@ -24,29 +24,35 @@
       padding: 2rem 1rem;
     }
 
-    /* LOGO + HEADER */
+    /* LOGO */
     .logo {
       display: block;
       margin: 0 auto 1.5rem;
-      max-width: 120px;
+      max-width: 140px;
       width: 100%;
       height: auto;
     }
-    h1 {
+
+    /* HEADERS */
+    h1, h2, h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.25rem;
       text-align: center;
-      margin-bottom: .75rem;
       line-height: 1.2;
     }
+    h1 {
+      font-size: 2.25rem;
+      margin-bottom: .75rem;
+    }
     .subtitles h2 {
-      font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
       font-weight: normal;
-      text-align: center;
-      margin-bottom: .5rem;
+      margin-bottom: .75rem;
       opacity: .85;
-      line-height: 1.3;
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin-top: 2rem;
+      margin-bottom: .75rem;
     }
 
     /* VÍDEO */
@@ -73,15 +79,16 @@
       font-weight:600;
       border-radius:4px;
       transition: background .2s;
-      margin-bottom:2rem;
+      margin:1rem auto 2rem auto;
+      text-align:center;
     }
     .btn:hover { background:#d62828; }
 
-    /* LISTA DE BENEFÍCIOS */
+    /* BENEFÍCIOS */
     ul {
       list-style: none;
+      padding-left: 1.5rem;
       margin: 1rem 0 2rem;
-      padding-left: 1rem;
     }
     ul li {
       position: relative;
@@ -99,7 +106,7 @@
     /* DEPOIMENTOS */
     .testimonials {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
       margin: 2rem 0;
     }
@@ -108,21 +115,29 @@
       padding: 1rem;
       border-radius: 6px;
       font-style: italic;
-      font-size:.95rem;
+      font-size: .95rem;
       line-height:1.3;
+      text-align: justify;
+    }
+    .testimonial .test-img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: .5rem;
+      object-fit: cover;
+      max-height: 180px;
     }
     .testimonial strong {
       display: block;
       margin-top: .5rem;
-      font-style: normal;
       text-align: right;
+      font-style: normal;
       opacity:.8;
     }
 
-    /* DETALHES E PREÇO */
+    /* DETALHES & PREÇO */
     .details p {
       margin-bottom: .5rem;
-      opacity: .9;
+      opacity:.9;
       font-size:.95rem;
     }
     .price {
@@ -143,20 +158,20 @@
 
     /* RESPONSIVO */
     @media(max-width:600px) {
-      .container { padding: 1rem; }
+      .container { padding:1rem; }
       h1 { font-size:1.75rem; }
       .subtitles h2 { font-size:1rem; }
-      .btn { padding:.6rem 1.2rem; }
+      .btn { padding:.6rem 1.2rem; font-size:.9rem; }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <!-- logo -->
+    <!-- Logo -->
     <img src="logo.png" alt="Lo Que Calla Tu Sombra" class="logo">
 
-    <!-- título e subtítulos -->
+    <!-- Título e subtítulos -->
     <h1>LO QUE CALLA TU SOMBRA — CUANDO EL DOLOR SE VUELVE ESPEJO</h1>
     <div class="subtitles">
       <h2>Un libro que no busca explicar… Busca revelar.</h2>
@@ -164,20 +179,20 @@
       <h2>Basado en la psicología analítica de Carl Jung. Escrito para mujeres que ya no soportan anestesiar su verdad.</h2>
     </div>
 
-    <!-- vídeo -->
+    <!-- Vídeo VSL -->
     <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/EhljRIK2Vq4" allowfullscreen></iframe>
     </div>
 
-    <!-- botão -->
+    <!-- Botão de compra -->
     <div style="text-align:center;">
       <a class="btn" href="https://pay.hotmart.com/E99213726P" target="_blank">
         COMPRAR AHORA — ACCESO INMEDIATO
       </a>
     </div>
 
-    <!-- benefícios -->
-    <h2 style="margin-top:2rem; text-align:center;">Este libro te ayudará a…</h2>
+    <!-- Benefícios -->
+    <h3>Este libro te ayudará a…</h3>
     <ul>
       <li>Reconocer e integrar tu Sombra a través de una narrativa evocativa.</li>
       <li>Entender por qué repites vínculos que desgarran tu alma.</li>
@@ -186,22 +201,33 @@
       <li>Romper los ciclos invisibles de abandono y volver a habitarte.</li>
     </ul>
 
-    <!-- depoimentos -->
+    <!-- Depoimentos -->
     <div class="testimonials">
       <div class="testimonial">
-        “Me sentí vista por primera vez, ¡una experiencia profunda!”
-        <strong>– Ana G.</strong>
+        <img src="testimonial1.jpg" alt="Depoimento Catalina" class="test-img">
+        <p>Todo tal cual el alma se enamora del espejo de sí misma, y la esperanza de ser elegida. Y la otra persona no es nada más que el refugio del dolor por la herida, y esas mariposas, nervios, sudores o palpitaciones, al encontrarte con alguien, es la sincronización de dos almas en la misma energía, las cuales tienen que encontrarse para poder revelar el verdadero Ser y el Amor.</p>
+        <strong>@catalinapalazoncarrillo2454</strong>
       </div>
       <div class="testimonial">
-        “Este libro reflejó cada rincón de mi dolor y me dio herramientas para transformarlo.”
-        <strong>– María P.</strong>
+        <img src="testimonial2.jpg" alt="Depoimento Ancientmage" class="test-img">
+        <p>Llevo 5 años sola sin pareja y lo considero una etapa de sanación por tanto daño recibido. No extraño estar en pareja, ni una sola vez me sentí amada, pero como alquimista que soy transmuté ese dolor y tragedia en una mujer inteligente y poderosa que sabe controlar sus emociones y vive su vida sin apegos. Mi paz no es negociable 😊❤️ Saludos</p>
+        <strong>@ancientmage2669</strong>
       </div>
-      <!-- Aqui depois insira 2 divs com screenshots -->
+      <div class="testimonial">
+        <img src="testimonial3.jpg" alt="Depoimento Lindasoledad" class="test-img">
+        <p>Hermosa verdad, gracias, gracias por aclarar dentro de mi, esa hambre que desde niña venía sintiendo y me perdí tantas veces y ahora ya soy de nuevo quien decide ser leal conmigo misma, me sentí tantas veces que me traicionaba por permitir lo que sabía que no era amor ni me lo merecía. “YA NO MÁS MIGAJAS DE AMOR” Prefiero la soledad con esta paz que hoy tengo. Gracias por tan bello mensaje!!</p>
+        <strong>@lindasoledadsaenzrascon2845</strong>
+      </div>
+      <div class="testimonial">
+        <img src="testimonial4.jpg" alt="Depoimento SussieSantiago" class="test-img">
+        <p>¡Hay dios! describió todo lo que me pasó, idealicé demasiado a esa persona que me perdí, ahora no sé quién soy realmente, quiero sanar 😢</p>
+        <strong>@SussieSantiago-g2o</strong>
+      </div>
     </div>
 
-    <!-- detalhes do produto -->
+    <!-- Detalhes do produto -->
     <div class="details">
-      <h2 style="margin-top:2rem;">Sobre el contenido de “Lo Que Calla Tu Sombra”</h2>
+      <h3>Sobre el contenido de “Lo Que Calla Tu Sombra”</h3>
       <p>Formato: eBook PDF descargable</p>
       <p>Páginas: 53</p>
       <p>Acceso: inmediato vía email</p>
@@ -209,20 +235,20 @@
       <p>Estilo: escritura simbólica, emocional, transformadora</p>
     </div>
 
-    <!-- preço -->
+    <!-- Preço -->
     <div class="price">
       <strong>Precio especial de lanzamiento: 9,99 USD</strong><br>
       (Acceso inmediato, lectura privada en cualquier dispositivo.)
     </div>
 
-    <!-- botão final -->
+    <!-- Botão final -->
     <div style="text-align:center;">
       <a class="btn" href="https://pay.hotmart.com/E99213726P" target="_blank">
         COMPRAR AHORA — ACCESO INMEDIATO
       </a>
     </div>
 
-    <!-- mensagem final -->
+    <!-- Mensagem final -->
     <div class="final">
       No es un manual.<br>
       No es una respuesta.<br><br>
