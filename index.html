@@ -17,7 +17,7 @@
     }
     a { text-decoration: none; }
 
-    /* CONTAINER CENTRAL */
+    /* CONTAINER */
     .container {
       max-width: 700px;
       margin: 0 auto;
@@ -29,47 +29,36 @@
       margin: 0 auto 1.5rem;
       max-width: 140px;
       width: 100%;
-      height: auto;
     }
 
-    /* HEADERS */
+    /* TITLES */
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
-      line-height: 1.2;
+      line-height:1.2;
     }
-    h1 {
-      font-size: 2.25rem;
-      margin-bottom: .75rem;
-    }
+    h1 { font-size:2.25rem; margin-bottom:.75rem; }
     .subtitles h2 {
-      font-size: 1.1rem;
-      font-weight: normal;
-      margin-bottom: 1.25rem;
-      opacity: .85;
+      font-size:1.1rem; font-weight:normal;
+      margin-bottom:1.25rem; opacity:.85;
     }
-    h3 {
-      font-size: 1.15rem;
-      margin-top: 2rem;
-      margin-bottom: .75rem;
-    }
+    h3 { font-size:1.15rem; margin:2rem 0 .75rem; }
 
-    /* VÍDEO “LIMPO” SEM CONTROLES NEM SUGESTÕES */
+    /* VSL “LIMPA” */
     .video-wrap {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      margin: 2rem auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.5);
-      max-width: 100%;
+      position:relative;
+      padding-bottom:56.25%;
+      height:0;
+      overflow:hidden;
+      margin:2rem auto;
+      border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,.5);
     }
     .video-wrap iframe {
-      position: absolute; top:0; left:0;
+      position:absolute; top:0; left:0;
       width:100%; height:100%; border:0;
     }
 
-    /* BOTÃO */
+    /* CTA BUTTON */
     .btn {
       display:inline-block;
       background:#ff6b6b;
@@ -77,116 +66,109 @@
       padding:.75rem 1.5rem;
       font-weight:600;
       border-radius:4px;
-      transition: background .2s;
-      margin:1rem auto 2rem auto;
+      transition:background .2s;
+      margin:1rem auto 2rem;
     }
     .btn:hover { background:#ff4c4c; }
 
-    /* BENEFÍCIOS */
+    /* BENEFITS */
     ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem auto 2rem;
-      display: inline-block;
-      text-align: left;
+      list-style:none;
+      padding:0;
+      margin:1rem auto 2rem;
+      display:inline-block;
+      text-align:left;
     }
     ul li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: .75rem;
+      position:relative;
+      padding-left:1.5rem;
+      margin-bottom:.75rem;
       line-height:1.4;
     }
     ul li::before {
-      content: '•';
-      position: absolute;
-      left: 0;
-      color: #ff6b6b;
+      content:'•';
+      position:absolute; left:0;
+      color:#ff6b6b;
     }
 
-    /* DEPOIMENTOS */
+    /* TESTIMONIALS */
     .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:1rem;
+      margin:2rem 0;
     }
     .testimonial {
-      background: #222;
-      border-radius: 6px;
-      padding: .5rem;
+      background:#222;
+      border-radius:6px;
+      padding:.5rem;
     }
     .testimonial .test-img {
-      width: 100%;
-      border-radius: 6px;
-      object-fit: cover;
-      max-height: 180px;
+      width:100%;
+      border-radius:6px;
+      object-fit:cover;
+      max-height:180px;
     }
 
-    /* BLOCO FINAL UNIFICADO */
+    /* FINAL BLOCK */
     .final-block {
-      background: #222;
-      border-radius: 8px;
-      padding: 2rem 1.5rem;
-      margin: 2rem 0;
+      background:#222;
+      border-radius:8px;
+      padding:2rem 1.5rem;
+      margin:2rem 0;
     }
     .final-block .details h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      text-align: center;
+      font-family:'Playfair Display',serif;
+      font-size:1.3rem;
+      margin-bottom:1rem;
     }
     .final-block .details p {
-      font-size: .95rem;
-      margin: .25rem 0;
-      opacity: .9;
-      text-align: center;
+      font-size:.95rem;
+      margin:.25rem 0;
+      opacity:.9;
     }
     .final-block .price {
-      margin: 1.5rem 0;
-      text-align: center;
+      margin:1.5rem 0;
     }
     .final-block .price strong {
-      font-size: 1.3rem;
-      display: block;
+      font-size:1.3rem;
+      display:block;
     }
     .final-block .price span {
-      font-size: .9rem;
-      opacity: .85;
+      font-size:.9rem;
+      opacity:.85;
     }
     .final-block .trust h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      text-align: center;
+      font-family:'Playfair Display',serif;
+      font-size:1.2rem;
+      margin-bottom:1rem;
     }
     .final-block .trust ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto 1.5rem;
-      display: inline-block;
-      text-align: left;
+      list-style:none;
+      padding:0;
+      margin:0 auto 1.5rem;
+      display:inline-block;
+      text-align:left;
     }
     .final-block .trust li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: .75rem;
-      opacity: .9;
+      position:relative;
+      padding-left:1.5rem;
+      margin-bottom:.75rem;
+      opacity:.9;
     }
     .final-block .trust li::before {
-      content: '✔';
-      position: absolute;
-      left: 0;
-      color: #38b000;
+      content:'✔';
+      position:absolute; left:0;
+      color:#38b000;
     }
     .final-block .final p {
-      font-style: italic;
-      opacity: .8;
-      line-height: 1.4;
-      margin: .5rem 0;
-      text-align: center;
+      font-style:italic;
+      opacity:.8;
+      line-height:1.4;
+      margin:.5rem 0;
     }
 
-    /* RESPONSIVO */
+    /* RESPONSIVE */
     @media(max-width:600px) {
       .container { padding:1rem; }
       h1 { font-size:1.75rem; }
@@ -196,12 +178,10 @@
   </style>
 </head>
 <body>
-  <div class="container">
 
-    <!-- Logo -->
+  <div class="container">
     <img src="logo.png" alt="Lo Que Calla Tu Sombra" class="logo">
 
-    <!-- Título e subtítulos -->
     <h1>LO QUE CALLA TU SOMBRA — CUANDO EL DOLOR SE VUELVE ESPEJO</h1>
     <div class="subtitles">
       <h2>Un libro que no busca explicar… Busca revelar.</h2>
@@ -209,22 +189,20 @@
       <h2>Basado en la psicología analítica de Carl Jung. Escrito para mujeres que ya no soportan anestesiar su verdad.</h2>
     </div>
 
-    <!-- Vídeo VSL sem controles nem sugestões -->
+    <!-- EMBED ATUALIZADO -->
     <div class="video-wrap">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/EhljRIK2Vq4?rel=0&modestbranding=1&controls=0&fs=0&loop=1&playlist=EhljRIK2Vq4"
+        src="https://www.youtube-nocookie.com/embed/EhljRIK2Vq4?autoplay=1&mute=1&controls=0&fs=0&loop=1&rel=0&modestbranding=1&playlist=EhljRIK2Vq4"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen>
       </iframe>
     </div>
 
-    <!-- Botão de compra -->
     <a class="btn" href="https://pay.hotmart.com/E99213726P" target="_blank">
       COMPRAR AHORA — ACCESO INMEDIATO
     </a>
 
-    <!-- Benefícios -->
     <h3>Este libro te ayudará a…</h3>
     <ul>
       <li>Reconocer e integrar tu Sombra a través de una narrativa evocativa.</li>
@@ -234,7 +212,6 @@
       <li>Romper los ciclos invisibles de abandono y volver a habitarte.</li>
     </ul>
 
-    <!-- Depoimentos -->
     <div class="testimonials">
       <div class="testimonial"><img src="testimonial1.jpg" class="test-img" alt=""></div>
       <div class="testimonial"><img src="testimonial2.jpg" class="test-img" alt=""></div>
@@ -242,7 +219,6 @@
       <div class="testimonial"><img src="testimonial4.jpg" class="test-img" alt=""></div>
     </div>
 
-    <!-- Bloco final unificado -->
     <div class="final-block">
       <div class="details">
         <h3>Sobre el contenido de “Lo Que Calla Tu Sombra”</h3>
@@ -280,7 +256,6 @@
         <p>Es el espejo que tu sombra ha estado esperando.<br>Una vez que ves... ya no puedes desverte.<br>Retorno para ti.</p>
       </div>
     </div>
-
   </div>
 </body>
 </html>
