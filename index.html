@@ -13,7 +13,7 @@
       color: #eee;
       font-family: 'Roboto', sans-serif;
       line-height: 1.5;
-      text-align: center; /* tudo centralizado */
+      text-align: center;
     }
     a { text-decoration: none; }
 
@@ -53,7 +53,7 @@
       margin-bottom: .75rem;
     }
 
-    /* VÍDEO */
+    /* VÍDEO “CLEAN” */
     .video-wrap {
       position: relative;
       padding-bottom: 56.25%;
@@ -113,7 +113,7 @@
     .testimonial {
       background: #222;
       border-radius: 6px;
-      padding: 1rem;
+      padding: .5rem;
     }
     .testimonial .test-img {
       width: 100%;
@@ -128,20 +128,22 @@
       border-radius: 8px;
       padding: 2rem 1.5rem;
       margin: 2rem 0;
-      text-align: center;
     }
     .final-block .details h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
     .final-block .details p {
       font-size: .95rem;
       margin: .25rem 0;
       opacity: .9;
+      text-align: center;
     }
     .final-block .price {
       margin: 1.5rem 0;
+      text-align: center;
     }
     .final-block .price strong {
       font-size: 1.3rem;
@@ -155,6 +157,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.2rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
     .final-block .trust ul {
       list-style: none;
@@ -169,7 +172,6 @@
       margin-bottom: .75rem;
       opacity: .9;
     }
-    /* apenas ticks verdes */
     .final-block .trust li::before {
       content: '✔';
       position: absolute;
@@ -181,6 +183,7 @@
       opacity: .8;
       line-height: 1.4;
       margin: .5rem 0;
+      text-align: center;
     }
 
     /* RESPONSIVO */
@@ -207,9 +210,13 @@
       <h2>Basado en la psicología analítica de Carl Jung. Escrito para mujeres que ya no soportan anestesiar su verdad.</h2>
     </div>
 
-    <!-- Vídeo VSL -->
+    <!-- Vídeo VSL sem sugestões -->
     <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/EhljRIK2Vq4" allowfullscreen></iframe>
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/EhljRIK2Vq4?rel=0&modestbranding=1&controls=1&showinfo=0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
     </div>
 
     <!-- Botão de compra -->
@@ -229,18 +236,10 @@
 
     <!-- Depoimentos -->
     <div class="testimonials">
-      <div class="testimonial">
-        <img src="testimonial1.jpg" class="test-img" alt="">
-      </div>
-      <div class="testimonial">
-        <img src="testimonial2.jpg" class="test-img" alt="">
-      </div>
-      <div class="testimonial">
-        <img src="testimonial3.jpg" class="test-img" alt="">
-      </div>
-      <div class="testimonial">
-        <img src="testimonial4.jpg" class="test-img" alt="">
-      </div>
+      <div class="testimonial"><img src="testimonial1.jpg" class="test-img" alt=""></div>
+      <div class="testimonial"><img src="testimonial2.jpg" class="test-img" alt=""></div>
+      <div class="testimonial"><img src="testimonial3.jpg" class="test-img" alt=""></div>
+      <div class="testimonial"><img src="testimonial4.jpg" class="test-img" alt=""></div>
     </div>
 
     <!-- Bloco final unificado -->
